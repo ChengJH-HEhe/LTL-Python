@@ -247,30 +247,6 @@ python src/main.py project_benchmark/TS.txt project_benchmark/benchmark.txt
 - 程序按 benchmark 中任务顺序输出 A+B 行。
 - 每行 `1` 表示满足，`0` 表示不满足。
 
-### 2.3 C++ 参考实现（LTL-verifier 子项目）
-
-```bash
-cd /home/oranjun/LTL-Formula/LTL-verifier
-xmake
-xmake run
-```
-
-说明：该实现会读取输入并生成结果文件，可用于与 Python 版本对照。
-
-### 2.4 Python 与 C++ 结果一致性对比
-
-仓库提供对比脚本：
-
-```bash
-cd /home/oranjun/LTL-Formula
-python tools/compare_ltl_verifier.py --no-build
-python tools/compare_ltl_verifier.py project_benchmark/TS.txt project_benchmark/benchmark.txt --no-build
-```
-
-当前仓库记忆中的验证结论：两组 benchmark 的 mismatch 均为 0。
-
----
-
 ## 三、实现文档（结构、数据结构、主要细节）
 
 ### 3.1 代码结构
